@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IGOR TAQUARY</title>
     <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="icon" href="./img/logo-white.png">
+    <link rel="icon" href="./img/logo-white-mini.png">
 </head>
 
 <body>
-    <header>
-        <picture>
-            <source media="(min-width: 740px)" srcset="./img/logo-white-minor.png" width="176,5px">
-            <img class="cbc logo" src="./img/logo-white.png" alt="logo">
+    <header id="cbc">
+        <picture href='www.google.com'>
+            <source media="(min-width: 740px)" srcset="./img/logo-white.png" width="176,5px">
+            <img class="logo" src="./img/logo-white-mini.png" alt="logo">
         </picture>
-        <div class="cbc title">Produtos Orgânicos</div>
+        <div class="title">Produtos Orgânicos</div>
 
     </header>
     <div class="mainBack">
+
+        <picture class="banner">
+            <source media="(min-width: 740px)" srcset="">
+            <img alt="banner" src="" width="80%">
+        </picture>
+
         <div class="selection">Exibir Produtos:
             <select name="category" category-selector>
                 <option value="Todos">Todos</option>
@@ -30,8 +36,9 @@
 
         </main>
     </div>
+    <a href="#cbc" id="backTop"><img src="./img/arrow.png" alt="Voltar ao topo" width="40px"></a>
     <footer>
-        Feito por Igor Taquary
+        Feito por Igor Taquary.
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

@@ -1,24 +1,21 @@
+
 * {
     margin: 0;
     padding: 0;
 }
 
 header {
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
     height: 80px;
-    padding: 0;
     background-color: #43b02a;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue", Arial,"Noto Sans",
     sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
-
-.cbc {
-    display: inline-block;
 }
 
 .title {
@@ -29,8 +26,6 @@ header {
 }
 
 .logo {
-    margin-left: 10px;
-    /* margin-top: 10px; */
     height: 60px;
     position: absolute;
     top: 10px;
@@ -39,22 +34,33 @@ header {
 
 .selection {
     font-weight: bold;
+    font-size: 25px;
     min-width: 150px;
     margin-top: 10px;
 }
 
 .selection select{
+    
+    background: white;
     cursor: pointer;
+    width: 112px;
+    height: 30px;
+}
+
+.banner {
+    margin-top: 40px;
 }
 
 .mainBack {
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(240, 240, 240);
     text-align: center;
     width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 main {
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(240, 240, 240);
     text-align: center;
     justify-content: center;
     margin: 10px 60px;
@@ -64,20 +70,20 @@ main {
 
 .productCel{
     overflow: hidden;
-    margin: 15px 10px;
-    border: 1px solid rgb(92, 92, 92);
-    border-radius: 10px;
-    height: 400px;
-    width: 300px;
+    margin: 5px 5px;
+    border: 1px solid rgb(0, 136, 18);
+    height: 350px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: white;
 }
 
-.productCel:hover{
-    border: 2px solid black;
+.productCel:hover {
+    border: 2px solid rgb(0, 136, 18);;
 }
+
 
 .productImg img{
     width: 200px;
@@ -90,12 +96,12 @@ main {
 }
 
 .productTitle {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .productPrice {
-    font-size: 30px;
+    font-size: 25px;
     color: #43b02a;
     position: absolute;
     bottom: 10px;
@@ -109,10 +115,24 @@ main {
 
 footer {
     background-color: #43b02a;
-    height: 40px;
+    height: 40px; 
     color: white;
     font-size: 20px;
-    padding-left: 20px;
+    padding: 10px 20px;
+}
+
+#backTop {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
 }
 
 #error {

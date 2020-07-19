@@ -20,19 +20,20 @@ function getData(content) {
 
 /* Funçao controladora: adiciona elementos e controla dados */
 function setElements(data, container) {
-    const banners = data.banners;
+    const bannersData = data.banners;
     const collections = data.collection_items;
     let zoneSlug;
-    let pagina = '';
+    let celulas = '';
 
     collections.forEach(collection => {
         collection.items.forEach(item => {
-            pagina += product(item, collection.slug);
+            celulas += product(item, collection.slug);
         });
     })
 
-    container.innerHTML = pagina;
-    selectCollection(collections);
+    container.innerHTML = celulas; //Adiciona as celulas na pagina
+    selectCollection(collections); //Adiciona as categorias do select
+    banners(bannersData); //Adiciona banners correspondentes
 }
 
 function showError(err, container) {
@@ -66,7 +67,7 @@ function product(itemData, zoneSlug) {
 }
 
 /* Retorna preços e tipo de unidade de algum item */
-function getPreco(itemData) { //default price
+function getPreco(itemData) {
     let unit = itemData.unit_type;
     let precos = itemData.prices
     let string = '';
@@ -98,4 +99,13 @@ function selectCollection(collections) {
             document.querySelectorAll(`[from="${selector.value}"`).forEach(e => { e.style.display = 'inline-block'; })
         }
     })
+}
+
+/* Carrega os banners */
+function banners(bannersData) {
+    const mobile = bannersData.find(banner => banner.is_mobile == true);
+    const desktop = bannersData.find(banner => banner.is_desktop == true);
+
+    document.querySelector('.banner source').srcset = `https://assets.instabuy.com.br/ib.store.banner/bnr-${desktop.image}`;
+    document.querySelector('.banner img').src = `https://assets.instabuy.com.br/ib.store.banner/bnr-${mobile.image}`;
 }
