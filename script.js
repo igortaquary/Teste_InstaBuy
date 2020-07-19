@@ -87,7 +87,6 @@ function selectCollection(collections) {
     const selector = document.querySelector('[category-selector]');
     selector.innerHTML = ('<option value="Todos">Todos</option>');
     collections.forEach(collection => {
-        console.log(collection.title);
         selector.innerHTML += (`<option value="${collection.slug}">${collection.title}</option>`);
     })
 
